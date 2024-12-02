@@ -28,9 +28,30 @@ class ThreadData{
             ThreadItem("Naina commented on your photo"),
             ThreadItem("I really want to connect with you \uD83D\uDC97"),
             ThreadItem("｡ﾟﾟ･｡･ﾟﾟ｡\n" +
-                    "ﾟ。   i'm in love with you.\n" +
+                    "ﾟ。  i'm in love with you.\n" +
                     "　ﾟ･｡･ﾟ ❤❤❤❤❤❤"),
-            ThreadItem("aap bahut cute ho \uD83E\uDD70apki smile bahut achi he sach me ❤\uFE0F\uD83E\uDD70")
+            ThreadItem("aap bahut cute ho \uD83E\uDD70apki smile bahut achi he sach me ❤\uFE0F\uD83E\uDD70"),
+            ThreadItem("Kyaa Aapki Saadi ho gyi....☺\uFE0F"),
+            ThreadItem("typing... "),
+            ThreadItem(".'Ek message toh kardo yaar \uD83E\uDD7A\uD83E\uDD7A '\n" +
+                    " \"ltni bhi buri nhi hun me \uD83D\uDE1E\"\n" +
+                    " \uD83D\uDE01\uD83D\uDE01\uD83D\uDE01\uD83D\uDE01\uD83D\uDE01\uD83D\uDE01\uD83D\uDE01"),
+            ThreadItem("Apko dekh kar lagta nahi ki aap\n" +
+                    "Married hai \n" +
+                    "\uD83D\uDE07"),
+            ThreadItem("मैं तुम्हारा इंस्टाग्राम पर वेट कर रही हूं फॉलो करके मैसेज में है हेलो लिख दो...!"),
+            ThreadItem("I love you \uD83D\uDC95\uD83D\uDC97 man"),
+            ThreadItem("This message is for you :\n" +
+                    "Apki  Dp  bahut  mast  hai...... \uD83D\uDC4C\uD83D\uDC97❤❣\uFE0F\n" +
+                    " wow........... \uD83E\uDD17\uD83E\uDD29")
+            
+            
+        )
+    }
+    fun getThreads2():ArrayList<ThreadItem>{
+        return arrayListOf(
+            ThreadItem("Which programming language you loved the most"),
+            ThreadItem("Which programming language you using right now")
         )
     }
 }

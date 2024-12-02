@@ -8,46 +8,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="320dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/addThreadToListButton">
-    
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/threadEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter text here">
-            
-        </com.google.android.material.textfield.TextInputEditText>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <Button
-        android:id="@+id/addThreadToListButton"
-        android:layout_width="65dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rounded_rectangular_button"
-        android:text="Add"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/textInputLayout"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/threadsRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         tools:listitem="@layout/thread_item"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayout"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/clearListButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -58,23 +24,36 @@
         android:id="@+id/clearListButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear List"
+        android:text="@string/clear_list"
         android:textColor="@color/white"
+        android:padding="10dp"
+        android:background="@drawable/rounded_rectangular_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addThreadButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/addThreadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_thread"
+        android:textColor="@color/white"
+        android:padding="10dp"
         android:background="@drawable/rounded_rectangular_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/uploadAllThreadsButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@id/clearListButton" />
 
     <Button
         android:id="@+id/uploadAllThreadsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Threads Data List"
+        android:text="@string/upload_all"
         android:textColor="@color/white"
+        android:padding="10dp"
         android:background="@drawable/rounded_rectangular_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" 
-        app:layout_constraintStart_toEndOf="@id/clearListButton"/>
-
+        app:layout_constraintStart_toEndOf="@id/addThreadButton"/>
     
 </androidx.constraintlayout.widget.ConstraintLayout>

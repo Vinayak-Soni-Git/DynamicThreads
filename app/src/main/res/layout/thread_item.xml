@@ -5,12 +5,13 @@
     
     <TextView
         android:id="@+id/aThreadTextView"
-        android:text="This is a example thread"
+        android:text="@string/this_is_a_example_thread"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="wrap_content"
+        android:minHeight="50dp">
     </TextView>
 
 </LinearLayout>

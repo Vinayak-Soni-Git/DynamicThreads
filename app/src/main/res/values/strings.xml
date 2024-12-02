@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DynamicThreads</string>
+    <string name="this_is_a_example_thread">This is a example thread</string>
+    <string name="enter_text">Enter Text</string>
+    <string name="edit">Edit</string>
+    <string name="upload_all">Upload All</string>
+    <string name="dynamic_threads">Dynamic Threads</string>
+    <string name="clear_list">Clear List</string>
+    <string name="add_thread">Add Thread</string>
+    <string name="save">Save</string>
 </resources>

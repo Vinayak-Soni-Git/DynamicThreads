@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dynamicthreads.R
 import com.example.dynamicthreads.models.ThreadItem
 
-class ThreadsAdapter(private val context:Context, private val threadList:ArrayList<ThreadItem>): RecyclerView.Adapter<ThreadsAdapter.ViewHolder>() {
+class ThreadsAdapter(private val context:Context, private var threadList:ArrayList<ThreadItem>): RecyclerView.Adapter<ThreadsAdapter.ViewHolder>() {
     
     inner class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         val threadTextView:TextView = itemView.findViewById(R.id.aThreadTextView)
@@ -32,16 +32,22 @@ class ThreadsAdapter(private val context:Context, private val threadList:ArrayLi
         val threadItem = threadList[position]
         holder.threadTextView.text = threadItem.text
     }
+
+    fun updateData(newThreadList:ArrayList<ThreadItem>){
+        threadList = newThreadList
+        notifyDataSetChanged()
+    }
     
     fun editItem(position:Int){
         val dialog = Dialog(context)
         dialog.setContentView(R.layout.edit_thread_layout)
+        dialog.window?.setLayout(1000, 500)
         val editText:EditText = dialog.findViewById(R.id.editThreadEditText)
         val editButton:Button = dialog.findViewById(R.id.editButton)
-        var threadItem = threadList[position]
+        val threadItem = threadList[position]
         editText.setText(threadItem.text)
         dialog.setCanceledOnTouchOutside(false)
-        
+
         editButton.setOnClickListener{
             threadItem.text = editText.text.toString()
             notifyItemChanged(position)
