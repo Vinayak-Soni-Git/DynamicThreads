@@ -106,23 +106,16 @@ class MainActivity : AppCompatActivity() {
                 threadsViewModel.addThreadToList(editText.text.toString())
                 threadsAdapter.notifyDataSetChanged()
                 dialog.dismiss()
-                Toast.makeText(this@MainActivity, "Thread Item edited", Toast.LENGTH_SHORT).show()
             }
             dialog.show()
         }
         
         uploadAllButton.setOnClickListener{
             val handler = Handler(Looper.getMainLooper())
-
-            // Iterate over the list and post delayed actions
             threadsViewModel.threadList.value?.forEachIndexed { index, item ->
                 handler.postDelayed({
-                    // Print the item to the log or a TextView
-                    publishThread(item.toString())
-                    // Replace with your desired UI update or logging
-                    // For example, to update a TextView:
-                    // binding.textView.text = item
-                }, index * 2000L) // Delay in milliseconds (2 seconds * index)
+                    publishThread(item.text)
+                }, 4000L)
             }
         }
 

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dynamicthreads.R
 import com.example.dynamicthreads.models.ThreadItem
@@ -52,7 +51,6 @@ class ThreadsAdapter(private val context:Context, private var threadList:ArrayLi
             threadItem.text = editText.text.toString()
             notifyItemChanged(position)
             dialog.dismiss()
-            Toast.makeText(context, "Thread Item edited", Toast.LENGTH_SHORT).show()
         }
         dialog.show()
     }
@@ -60,6 +58,5 @@ class ThreadsAdapter(private val context:Context, private var threadList:ArrayLi
     fun removeAt(position:Int){
         threadList.removeAt(position)
         notifyItemRemoved(position)
-        Toast.makeText(context, "Item removed", Toast.LENGTH_SHORT).show()
     }
 }
